@@ -3,3 +3,6 @@ form.png
 formulario_google.pdf
 logo-upc-2024.png
 __pycache__/
+
+# datos de prueba: los genera tools/csv_prueba.py y no deben publicarse
+web/data/pruebas.csv

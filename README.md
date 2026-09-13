@@ -123,7 +123,7 @@ web/                       el sitio que se publica
   estilo.css               apariencia (paleta institucional)
   app.js                   dibujo de los gráficos y el mapa
   datos.js                 lectura de la planilla, normalización y conteo
-  data/config.json         configuración: planilla, colores, textos, frecuencias
+  data/config.json         configuración: pestaña y columnas de la planilla, colores, textos
   data/sedes.json          cada sede y su coordenada
   data/mapa.json           contorno de la provincia y departamentos
   assets/logo-upc.png      isologotipo institucional
@@ -131,7 +131,6 @@ web/                       el sitio que se publica
 server.py                  servidor opcional para leer una planilla PRIVADA
 gapi.py                    acceso a Google con credenciales propias (lo usa server.py)
 tools/                     utilidades: datos de prueba y verificaciones
-PUBLICAR.md                pasos técnicos de publicación y opciones de datos
 ```
 
 El tablero **no usa librerías externas**: ni CDN, ni tipografías descargadas. Todo el
@@ -160,6 +159,10 @@ publicar. Si se generan en `web/data/`, hay que eliminarlos para no dejarlos en 
 
 ## Publicar cambios
 
-Cada push a `main` publica automáticamente el contenido de `web/` en GitHub Pages. Los pasos
-iniciales, las opciones de lectura de datos y el detalle del flujo están en
-**[PUBLICAR.md](PUBLICAR.md)**.
+Cada push a `main` publica automáticamente el contenido de `web/` en GitHub Pages, y el
+sitio queda en `https://<usuario>.github.io/<repositorio>/`.
+
+La primera vez hay que habilitar Pages en el repositorio: **Settings → Pages → Source:
+GitHub Actions**. Sin ese paso el workflow falla con `Get Pages site failed`, porque la
+acción consulta la configuración del sitio y recibe 404 si todavía no existe. El estado de
+cada publicación se ve en la pestaña **Actions** del repositorio.
