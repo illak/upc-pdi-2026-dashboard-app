@@ -59,18 +59,10 @@ body{
   border-bottom:3px solid var(--tinta);
   padding-bottom:12px;
 }
-.marca{ display:flex; align-items:center; gap:14px; }
-.logo{
-  width:74px; height:74px;
-  background:var(--amarillo);
-  border:2.5px solid var(--tinta);
-  display:grid; place-items:center;
-  font-family:var(--mono); font-weight:700; font-size:26px;
-  letter-spacing:-1px; color:var(--tinta);
-}
-.marca-txt{ display:flex; flex-direction:column; line-height:1.15; }
-.marca-txt b{ font-size:19px; font-weight:800; letter-spacing:-.2px; }
-.marca-txt span{ font-size:15px; color:var(--gris); }
+.marca{ display:flex; align-items:center; }
+/* isologotipo institucional: PNG con fondo transparente, 1155×288 (4:1), con el
+   símbolo amarillo y el nombre en gris oscuro ya incorporados */
+.marca-logo{ height:72px; width:auto; display:block; }
 
 .titulos h1{
   font-size:31px; font-weight:800; letter-spacing:-.6px; line-height:1.1;
