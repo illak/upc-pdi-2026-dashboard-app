@@ -9,8 +9,8 @@
   },
 
   "planilla": {
-    "_comentario": "Planilla de respuestas. La pestaña 'data' es la que tiene los 4 campos que se visualizan (sin correos) y está abierta al público en solo lectura, así que el navegador la puede leer sin servidor ni clave.",
-    "id": "1UCjQ6LXJPY2SzkaK3H5jg_0b4_cask7FKxEYdkeBwiU",
+    "_comentario": "La planilla se indica POR URL para no dejarla escrita en el repositorio: .../?planilla=<id-de-la-planilla>. También se aceptan ?gid=<id-de-pestaña> y ?hoja=<nombre>. El navegador lo recuerda, así que después alcanza con abrir la dirección sin parámetros. Acá abajo va todo lo que NO es el identificador: la pestaña, el orden de columnas y las palabras clave que usa el lector.",
+    "id": "",
     "gid": "1704801256",
     "hoja": "data",
     "rango": "A1:D",

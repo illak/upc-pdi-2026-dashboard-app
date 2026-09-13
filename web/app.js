@@ -111,9 +111,13 @@ function pintarEstado(ok, d){
     t.textContent = ETIQUETA_MODO[modo] || 'EN VIVO';
     est.classList.remove('alerta');
     const base = $('#pie-estado').dataset.base || 'Lectura cada 3 s';
+    // si no hay planilla indicada, se avisa cómo indicarla (salvo en modo demo)
+    const falta = (S.cfg && S.cfg.sin_planilla && modo !== 'demo')
+      ? ' · falta la planilla: agregá ?planilla=<id>' : '';
     est.textContent = base + ' · últ. lectura ' + d.ts +
                       (modo === 'demo' ? ' · datos simulados' : '') +
-                      (modo === 'archivo' ? ' · snapshot, no es lectura en vivo' : '');
+                      (modo === 'archivo' ? ' · snapshot, no es lectura en vivo' : '') +
+                      falta;
   }else{
     p.classList.add('off');
     t.textContent = 'SIN DATOS';

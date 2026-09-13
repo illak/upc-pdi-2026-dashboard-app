@@ -21,6 +21,7 @@ const Datos = (() => {
   const CLAVES = ['hora', 'correo', 'unidad', 'claustro', 'rol'];
   const CLAVES_BUSQUEDA = ['marca temporal', 'correo', 'unidad', 'claustro', 'rol'];
   const CACHE_KEY = 'pdi2026.ultimo';
+  const CLAVE_PLANILLA = 'pdi2026.planilla';   // planilla recordada del ?planilla=<id>
 
   let CFG = null;          // config.json (web/data/config.json)
   let SEDES = null;        // data/sedes.json
@@ -151,6 +152,20 @@ const Datos = (() => {
       .sort((a, b) => (b.n - a.n) || a.k.localeCompare(b.k, 'es'));
   }
 
+  // parte de la configuración que necesita el cliente (nunca datos de la planilla)
+  function cfgPublica(cfg) {
+    const frec = cfg.frecuencia || {};
+    return {
+      evento: cfg.evento || {},
+      cliente_s: frec.cliente_s || 3,
+      mapa: cfg.mapa || {},
+      etiquetas_unidad: cfg.etiquetas_unidad || {},
+      colores_unidad: cfg.colores_unidad || {},
+      grupos: cfg.grupos || [],
+      sin_planilla: !((cfg.planilla && cfg.planilla.id) || (cfg.fuente && cfg.fuente.csv_url)),
+    };
+  }
+
   function snapshot(regs, cfg, modo, error) {
     const etq = cfg.etiquetas || {};
     const frec = cfg.frecuencia || {};
@@ -208,14 +223,7 @@ const Datos = (() => {
       ultimo_pulso: recientes.length ? recientes[recientes.length - 1].i : -1,
       vida_pulso_s: frec.vida_pulso_s || 90,
       arranque_epoch: T0,
-      cfg: {
-        evento: cfg.evento || {},
-        cliente_s: frec.cliente_s || 3,
-        mapa: cfg.mapa || {},
-        etiquetas_unidad: cfg.etiquetas_unidad || {},
-        colores_unidad: cfg.colores_unidad || {},
-        grupos: cfg.grupos || [],
-      },
+      cfg: cfgPublica(cfg),
     };
   }
 
@@ -370,6 +378,12 @@ const Datos = (() => {
     return null;
   }
 
+  // planilla recordada: se guarda al abrir con ?planilla=<id>
+  function recordarPlanilla() {
+    try { return localStorage.getItem(CLAVE_PLANILLA) || ''; }
+    catch (e) { return ''; }        // modo privado o almacenamiento bloqueado
+  }
+
   /* ─────────────────────────── plan de fuentes ─────────────────────────────── */
   function plan(cfg, pedido) {
     const p = cfg.planilla || {}, f = cfg.fuente || {};
@@ -400,11 +414,37 @@ const Datos = (() => {
 
   /* ─────────────────────────── API pública ─────────────────────────────────── */
   async function leerEstado() {
-    const cfg = await cargarConfig();
+    // se trabaja sobre una copia: la configuración cargada no se modifica nunca,
+    // así lo que llega por URL (planilla, gid, hoja, csv) vale solo para esta lectura
+    const base = await cargarConfig();
+    const cfg = Object.assign({}, base, {
+      planilla: Object.assign({}, base.planilla),
+      fuente: Object.assign({}, base.fuente),
+    });
     await cargarSedes();
     if (T0 === null) T0 = Date.now();
 
     const sp = new URLSearchParams(location.search);
+
+    // ── la planilla puede venir por URL ──────────────────────────────────────
+    // ?planilla=<id>  (también ?gid= y ?hoja=). Así el identificador no queda
+    // escrito en el repositorio, que es público. Se guarda en el navegador para
+    // que después alcance con abrir la dirección sin parámetros; pasar
+    // ?planilla= (vacío) lo olvida.
+    const deUrl = sp.get('planilla') !== null ? sp.get('planilla') : sp.get('id');
+    let idPlanilla = deUrl !== null ? String(deUrl).trim() : recordarPlanilla();
+    if(deUrl !== null){
+      try {
+        if(idPlanilla) localStorage.setItem(CLAVE_PLANILLA, idPlanilla);
+        else localStorage.removeItem(CLAVE_PLANILLA);
+      } catch(e) { /* modo privado */ }
+    }
+    if(idPlanilla){
+      cfg.planilla = Object.assign({}, cfg.planilla, { id: idPlanilla });
+      if(sp.get('gid'))  cfg.planilla.gid  = sp.get('gid');
+      if(sp.get('hoja')) cfg.planilla.hoja = sp.get('hoja');
+    }
+
     const pedido = sp.get('demo') ? 'demo' : (sp.get('fuente') || (cfg.fuente && cfg.fuente.modo) || 'auto');
     const urlForzada = sp.get('url');          // ?fuente=csv&url=... (probar otra planilla/CSV)
     if (urlForzada) cfg.fuente = Object.assign({}, cfg.fuente, { csv_url: urlForzada });
@@ -426,6 +466,13 @@ const Datos = (() => {
           listo.modo = paso === 'json' ? 'archivo' : listo.modo;
           listo.ok = true;
           listo.error = aviso;
+          // la configuración que ve el cliente sale siempre de la ruta actual: el
+          // snapshot horneado trae la suya y puede estar vieja. El aviso de "falta la
+          // planilla" solo corresponde cuando el tablero quedó leyendo un snapshot o
+          // datos simulados (si responde el servidor, la API o el CSV, hay planilla).
+          const pub = cfgPublica(cfg);
+          pub.sin_planilla = pub.sin_planilla && (paso === 'json' || paso === 'demo');
+          listo.cfg = Object.assign({}, listo.cfg || {}, pub);
           // fuente real del dato: en modo servidor el snapshot ya trae su propio modo
           listo.fuente = paso === 'servidor' ? (listo.modo || 'servidor') : paso;
           listo.pasos_fallidos = errores.slice();
