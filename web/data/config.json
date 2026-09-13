@@ -102,10 +102,9 @@
 
   "grupos": [
     {
-      "_comentario": "Contadores que suman varias unidades. 'Capital' agrupa las 4 facultades y el instituto IGTP.",
-      "nombre": "capital",
-      "etiqueta": "Capital",
-      "nota": "4 facultades + IGTP",
+      "_comentario": "Contadores que suman varias unidades. Este agrupa las 4 facultades y el instituto IGTP: NO incluye rectorado, jefatura de gabinete ni las 6 secretarías (eso es lo que suma el círculo de la Capital en el mapa, que siempre da más).",
+      "nombre": "facultades-igtp",
+      "etiqueta": "Facultades + IGTP",
       "unidades": [
         "Facultad de Arte y Diseño",
         "Facultad de Educación y Salud",

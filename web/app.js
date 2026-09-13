@@ -249,8 +249,8 @@ function pintarUnidades(items){
 }
 
 /* ══════════════════════ contadores por grupo ══════════════════════
-   Cada grupo del config suma varias unidades (por ejemplo "Capital" = las 4
-   facultades + el instituto IGTP). Se dibujan como un contador más del panel. */
+   Cada grupo del config suma varias unidades (por ejemplo "Facultades + IGTP" =
+   las 4 facultades y el instituto). Se dibujan como un contador más del panel. */
 function pintarGrupos(unidades){
   const cont = $('#kpi-grupos');
   if(!cont) return;

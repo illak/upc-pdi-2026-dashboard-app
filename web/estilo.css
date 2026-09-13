@@ -214,7 +214,7 @@ body{
   text-transform:uppercase; letter-spacing:.5px; color:var(--gris);
 }
 #mini-otro .mini-num{ font-size:28px; color:var(--gris); }
-/* contador de grupo (p. ej. Capital = 4 facultades + IGTP) */
+/* contador de grupo (p. ej. Facultades + IGTP) */
 .mini-grupo{
   border-top:1.5px solid var(--linea);
   margin-top:2px; padding-top:10px; padding-left:10px;
