@@ -1,0 +1,312 @@
+{
+ "ok": true,
+ "modo": "csv",
+ "error": null,
+ "ts": "20:24:04",
+ "ts_epoch": 1789255444.9947252,
+ "version": 1,
+ "total": 12,
+ "en_mapa": 12,
+ "sin_ubicacion": 0,
+ "sedes_activas": 12,
+ "ultima_hora": "18:08:41",
+ "unidades": [
+  {
+   "k": "Facultad de Arte y Diseño",
+   "n": 1,
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "dep": "Capital",
+   "tipo": "facultad",
+   "corta": "Facultad de Arte y Diseño"
+  },
+  {
+   "k": "Facultad de Educación Física",
+   "n": 1,
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "dep": "Capital",
+   "tipo": "facultad",
+   "corta": "Facultad de Educación Física"
+  },
+  {
+   "k": "Facultad de Turismo y Ambiente",
+   "n": 1,
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "dep": "Capital",
+   "tipo": "facultad",
+   "corta": "Facultad de Turismo y Ambiente"
+  },
+  {
+   "k": "Instituto de Gestión e Innovación Tecnológica y Productiva",
+   "n": 1,
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "dep": "Capital",
+   "tipo": "instituto",
+   "corta": "Instituto de Gestión e Innovación Tecnológica y Productiva"
+  },
+  {
+   "k": "Rectorado",
+   "n": 1,
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "dep": "Capital",
+   "tipo": "rectorado",
+   "corta": "Rectorado"
+  },
+  {
+   "k": "Secretaría Académica y de Posgrado",
+   "n": 1,
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "dep": "Capital",
+   "tipo": "secretaria",
+   "corta": "Secretaría Académica y de Posgrado"
+  },
+  {
+   "k": "Secretaría de Bienestar Estudiantil y Graduados",
+   "n": 1,
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "dep": "Capital",
+   "tipo": "secretaria",
+   "corta": "Secretaría de Bienestar Estudiantil y Graduados"
+  },
+  {
+   "k": "Secretaría de Extensión",
+   "n": 1,
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "dep": "Capital",
+   "tipo": "secretaria",
+   "corta": "Secretaría de Extensión"
+  },
+  {
+   "k": "Sede Regional Deán Funes - Juan Bautista Alberdi",
+   "n": 1,
+   "lat": -30.42498,
+   "lon": -64.35274,
+   "dep": "Ischilín",
+   "tipo": "sede",
+   "corta": "Deán Funes"
+  },
+  {
+   "k": "Sede Regional Morteros - María Justa Moyano de Ezpeleta",
+   "n": 1,
+   "lat": -30.71067,
+   "lon": -62.00724,
+   "dep": "San Justo",
+   "tipo": "sede",
+   "corta": "Morteros"
+  },
+  {
+   "k": "Sede Regional Río Tercero",
+   "n": 1,
+   "lat": -32.17674,
+   "lon": -64.11296,
+   "dep": "Tercero Arriba",
+   "tipo": "sede",
+   "corta": "Río Tercero"
+  },
+  {
+   "k": "Sede Regional Villa Dolores - Luis Tessandori",
+   "n": 1,
+   "lat": -31.94498,
+   "lon": -65.19024,
+   "dep": "San Javier",
+   "tipo": "sede",
+   "corta": "Villa Dolores"
+  }
+ ],
+ "claustros": [
+  {
+   "k": "Docente",
+   "n": 6,
+   "etq": "Docente"
+  },
+  {
+   "k": "No docente",
+   "n": 3,
+   "etq": "No docente"
+  },
+  {
+   "k": "Estudiantil",
+   "n": 2,
+   "etq": "Estudiantil"
+  },
+  {
+   "k": "Graduados",
+   "n": 1,
+   "etq": "Graduados"
+  }
+ ],
+ "roles": [
+  {
+   "k": "Docente",
+   "n": 3,
+   "etq": "Docente"
+  },
+  {
+   "k": "Dirección o Coordinación de área",
+   "n": 2,
+   "etq": "Dir. / Coord. de área"
+  },
+  {
+   "k": "Secretaria o Secretario",
+   "n": 2,
+   "etq": "Secretaría"
+  },
+  {
+   "k": "Autoridad institucional",
+   "n": 1,
+   "etq": "Autoridad institucional"
+  },
+  {
+   "k": "Estudiante de posgrado",
+   "n": 1,
+   "etq": "Estud. de posgrado"
+  },
+  {
+   "k": "Estudiante de pregrado y/o grado",
+   "n": 1,
+   "etq": "Estud. pregrado / grado"
+  },
+  {
+   "k": "Graduado",
+   "n": 1,
+   "etq": "Graduado"
+  },
+  {
+   "k": "Personal no docente",
+   "n": 1,
+   "etq": "Personal no docente"
+  }
+ ],
+ "recientes": [
+  {
+   "i": 0,
+   "hora": "18:02:11",
+   "unidad": "Facultad de Arte y Diseño",
+   "corta": "Facultad de Arte y Diseño",
+   "tipo": "facultad",
+   "claustro": "Docente",
+   "rol": "Docente"
+  },
+  {
+   "i": 1,
+   "hora": "18:02:39",
+   "unidad": "Sede Regional Río Tercero",
+   "corta": "Río Tercero",
+   "tipo": "sede",
+   "claustro": "No docente",
+   "rol": "Personal no docente"
+  },
+  {
+   "i": 2,
+   "hora": "18:03:05",
+   "unidad": "Secretaría de Extensión",
+   "corta": "Secretaría de Extensión",
+   "tipo": "secretaria",
+   "claustro": "Docente",
+   "rol": "Secretaría"
+  },
+  {
+   "i": 3,
+   "hora": "18:03:44",
+   "unidad": "Otro: Sede Regional Villa Dolores",
+   "corta": "Villa Dolores",
+   "tipo": "sede",
+   "claustro": "Estudiantil",
+   "rol": "Estud. pregrado / grado"
+  },
+  {
+   "i": 4,
+   "hora": "18:04:12",
+   "unidad": "Rectorado",
+   "corta": "Rectorado",
+   "tipo": "rectorado",
+   "claustro": "Docente",
+   "rol": "Autoridad institucional"
+  },
+  {
+   "i": 5,
+   "hora": "18:04:58",
+   "unidad": "Facultad de Educación Física",
+   "corta": "Facultad de Educación Física",
+   "tipo": "facultad",
+   "claustro": "Graduados",
+   "rol": "Graduado"
+  },
+  {
+   "i": 6,
+   "hora": "18:05:21",
+   "unidad": "Sede Regional Morteros - María Justa Moyano de Ezpeleta",
+   "corta": "Morteros",
+   "tipo": "sede",
+   "claustro": "No docente",
+   "rol": "Dir. / Coord. de área"
+  },
+  {
+   "i": 7,
+   "hora": "18:06:03",
+   "unidad": "Instituto de Gestión e Innovación Tecnológica y Productiva",
+   "corta": "Instituto de Gestión e Innovación Tecnológica y Productiva",
+   "tipo": "instituto",
+   "claustro": "Docente",
+   "rol": "Docente"
+  },
+  {
+   "i": 8,
+   "hora": "18:06:47",
+   "unidad": "Secretaría de Bienestar Estudiantil y Graduados",
+   "corta": "Secretaría de Bienestar Estudiantil y Graduados",
+   "tipo": "secretaria",
+   "claustro": "No docente",
+   "rol": "Secretaría"
+  },
+  {
+   "i": 9,
+   "hora": "18:07:19",
+   "unidad": "Facultad de Turismo y Ambiente",
+   "corta": "Facultad de Turismo y Ambiente",
+   "tipo": "facultad",
+   "claustro": "Estudiantil",
+   "rol": "Estud. de posgrado"
+  },
+  {
+   "i": 10,
+   "hora": "18:08:02",
+   "unidad": "Sede Regional Deán Funes - Juan Bautista Alberdi",
+   "corta": "Deán Funes",
+   "tipo": "sede",
+   "claustro": "Docente",
+   "rol": "Dir. / Coord. de área"
+  },
+  {
+   "i": 11,
+   "hora": "18:08:41",
+   "unidad": "Secretaría Académica y de Posgrado",
+   "corta": "Secretaría Académica y de Posgrado",
+   "tipo": "secretaria",
+   "claustro": "Docente",
+   "rol": "Docente"
+  }
+ ],
+ "ultimo_pulso": 11,
+ "vida_pulso_s": 90,
+ "arranque_epoch": 1789255444.990552,
+ "cfg": {
+  "evento": {
+   "titulo": "Primera Jornada de Construcción Participativa del PDI",
+   "subtitulo": "Registro de ingresos · Universidad Provincial de Córdoba",
+   "fuente": "Formulario de registro · Primera Jornada de Construcción Participativa del PDI",
+   "institucion": "Universidad Provincial de Córdoba"
+  },
+  "cliente_s": 3,
+  "etiquetas_unidad": {},
+  "mapa": {}
+ },
+ "fuente": "json"
+}

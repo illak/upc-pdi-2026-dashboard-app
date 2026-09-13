@@ -1,0 +1,185 @@
+{
+ "capital": {
+  "dep": "Capital",
+  "lat": -31.41505,
+  "lon": -64.17911
+ },
+ "nodos": {
+  "Facultad de Arte y Diseño": {
+   "corta": "Facultad de Arte y Diseño",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "facultad"
+  },
+  "Facultad de Educación Física": {
+   "corta": "Facultad de Educación Física",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "facultad"
+  },
+  "Facultad de Educación y Salud": {
+   "corta": "Facultad de Educación y Salud",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "facultad"
+  },
+  "Facultad de Turismo y Ambiente": {
+   "corta": "Facultad de Turismo y Ambiente",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "facultad"
+  },
+  "Instituto de Gestión e Innovación Tecnológica y Productiva": {
+   "corta": "Instituto de Gestión e Innovación Tecnológica y Productiva",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "instituto"
+  },
+  "Jefatura de Gabinete": {
+   "corta": "Jefatura de Gabinete",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "rectorado"
+  },
+  "Rectorado": {
+   "corta": "Rectorado",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "rectorado"
+  },
+  "Secretaría Académica y de Posgrado": {
+   "corta": "Secretaría Académica y de Posgrado",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "secretaria"
+  },
+  "Secretaría de Administración y Recursos Humanos": {
+   "corta": "Secretaría de Administración y Recursos Humanos",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "secretaria"
+  },
+  "Secretaría de Bienestar Estudiantil y Graduados": {
+   "corta": "Secretaría de Bienestar Estudiantil y Graduados",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "secretaria"
+  },
+  "Secretaría de Ciencia, Arte y Tecnología": {
+   "corta": "Secretaría de Ciencia, Arte y Tecnología",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "secretaria"
+  },
+  "Secretaría de Coordinación y Asuntos Legales": {
+   "corta": "Secretaría de Coordinación y Asuntos Legales",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "secretaria"
+  },
+  "Secretaría de Extensión": {
+   "corta": "Secretaría de Extensión",
+   "dep": "Capital",
+   "lat": -31.41505,
+   "lon": -64.17911,
+   "tipo": "secretaria"
+  },
+  "Sede Regional Bell Ville - Mariano Moreno": {
+   "corta": "Bell Ville",
+   "dep": "Unión",
+   "lat": -32.63031,
+   "lon": -62.68879,
+   "tipo": "sede"
+  },
+  "Sede Regional Capilla del Monte - Dr. Bernardo Houssay": {
+   "corta": "Capilla del Monte",
+   "dep": "Punilla",
+   "lat": -30.85687,
+   "lon": -64.52635,
+   "tipo": "sede"
+  },
+  "Sede Regional Cruz del Eje - Arturo Capdevila": {
+   "corta": "Cruz del Eje",
+   "dep": "Cruz del Eje",
+   "lat": -30.74393,
+   "lon": -64.79078,
+   "tipo": "sede"
+  },
+  "Sede Regional Deán Funes - Juan Bautista Alberdi": {
+   "corta": "Deán Funes",
+   "dep": "Ischilín",
+   "lat": -30.42498,
+   "lon": -64.35274,
+   "tipo": "sede"
+  },
+  "Sede Regional Laboulaye - Eduardo Lefebvre": {
+   "corta": "Laboulaye",
+   "dep": "Presidente Roque Sáenz Peña",
+   "lat": -34.12863,
+   "lon": -63.3907,
+   "tipo": "sede"
+  },
+  "Sede Regional Las Varillas - Dalmacio Vélez Sarsfield": {
+   "corta": "Las Varillas",
+   "dep": "San Justo",
+   "lat": -31.87038,
+   "lon": -62.71966,
+   "tipo": "sede"
+  },
+  "Sede Regional Marcos Juárez - Bernardo Houssay": {
+   "corta": "Marcos Juárez",
+   "dep": "Marcos Juárez",
+   "lat": -32.69064,
+   "lon": -62.10113,
+   "tipo": "sede"
+  },
+  "Sede Regional Mina Clavero - Dr. Carlos María Carena": {
+   "corta": "Mina Clavero",
+   "dep": "San Alberto",
+   "lat": -31.72943,
+   "lon": -65.005,
+   "tipo": "sede"
+  },
+  "Sede Regional Morteros - María Justa Moyano de Ezpeleta": {
+   "corta": "Morteros",
+   "dep": "San Justo",
+   "lat": -30.71067,
+   "lon": -62.00724,
+   "tipo": "sede"
+  },
+  "Sede Regional Río Tercero": {
+   "corta": "Río Tercero",
+   "dep": "Tercero Arriba",
+   "lat": -32.17674,
+   "lon": -64.11296,
+   "tipo": "sede"
+  },
+  "Sede Regional Villa Carlos Paz - Arturo Umberto Illia - ISAUI": {
+   "corta": "Villa Carlos Paz",
+   "dep": "Punilla",
+   "lat": -31.41792,
+   "lon": -64.49403,
+   "tipo": "sede"
+  },
+  "Sede Regional Villa Dolores - Luis Tessandori": {
+   "corta": "Villa Dolores",
+   "dep": "San Javier",
+   "lat": -31.94498,
+   "lon": -65.19024,
+   "tipo": "sede"
+  }
+ },
+ "palabra_clave_capital": "Capital"
+}

@@ -1,0 +1,177 @@
+{
+  "_comentario": "Configuración del tablero en vivo - PDI 2026. Editar acá, no en el código. Este archivo lo lee el navegador (tiene que quedar publicado en web/data/).",
+
+  "evento": {
+    "titulo": "Primera Jornada de Construcción Participativa del PDI",
+    "subtitulo": "Registro de ingresos · Universidad Provincial de Córdoba",
+    "fuente": "Formulario de registro · Primera Jornada de Construcción Participativa del PDI",
+    "institucion": "Universidad Provincial de Córdoba"
+  },
+
+  "planilla": {
+    "_comentario": "Planilla de respuestas. La pestaña 'data' es la que tiene los 4 campos que se visualizan (sin correos) y está abierta al público en solo lectura, así que el navegador la puede leer sin servidor ni clave.",
+    "id": "1UCjQ6LXJPY2SzkaK3H5jg_0b4_cask7FKxEYdkeBwiU",
+    "gid": "1704801256",
+    "hoja": "data",
+    "rango": "A1:D",
+    "csv_local": "",
+    "csv_url": "",
+    "rangos_sin_correo": ["A1:A", "B1:D"],
+    "orden": ["hora", "unidad", "claustro", "rol"],
+    "columnas": {
+      "hora": ["marca temporal", "timestamp", "fecha"],
+      "correo": ["correo", "email", "mail"],
+      "unidad": ["unidad", "área de pertenencia", "area de pertenencia", "pertenencia"],
+      "claustro": ["claustro"],
+      "rol": ["rol", "función", "funcion"]
+    }
+  },
+
+  "fuente": {
+    "_comentario": "modo: auto | api | csv | json | demo. auto = servidor local -> api -> csv -> snapshot -> demo. Se puede forzar desde la URL: ?fuente=csv, ?fuente=json, ?demo=1",
+    "modo": "auto",
+    "api_key": "",
+    "csv_url": "",
+    "json_local": "data/estado.json"
+  },
+
+  "frecuencia": {
+    "servidor_s": 10,
+    "cliente_s": 3,
+    "vida_pulso_s": 90
+  },
+
+  "etiquetas": {
+    "Docente": "Docente",
+    "Estudiantil": "Estudiantil",
+    "No docente": "No docente",
+    "Graduados": "Graduados",
+    "Autoridad institucional": "Autoridad institucional",
+    "Secretaria o Secretario": "Secretaría",
+    "Dirección o Coordinación de área": "Dir. / Coord. de área",
+    "Dirección o Coordinación de carrera": "Dir. / Coord. de carrera",
+    "Estudiante de pregrado y/o grado": "Estud. pregrado / grado",
+    "Estudiante de posgrado": "Estud. de posgrado",
+    "Personal no docente": "Personal no docente",
+    "Graduado": "Graduado",
+    "Otro": "Otro"
+  },
+
+  "etiquetas_unidad": {
+    "_comentario": "Nombre corto para los paneles angostos (ranking y últimos ingresos). La clave es la opción tal como llega del formulario.",
+    "Rectorado": "Rectorado",
+    "Jefatura de Gabinete": "Jefatura de Gabinete",
+    "Secretaría Académica y de Posgrado": "Sec. Académica y Posgrado",
+    "Secretaría de Extensión": "Sec. de Extensión",
+    "Secretaría de Ciencia, Arte y Tecnología": "Sec. Ciencia, Arte y Tecnol.",
+    "Secretaría de Bienestar Estudiantil y Graduados": "Sec. Bienestar Est. y Grad.",
+    "Secretaría de Coordinación y Asuntos Legales": "Sec. Coord. y Asuntos Legales",
+    "Secretaría de Administración y Recursos Humanos": "Sec. Administración y RR.HH.",
+    "Facultad de Arte y Diseño": "Fac. de Arte y Diseño",
+    "Facultad de Educación y Salud": "Fac. de Educación y Salud",
+    "Facultad de Educación Física": "Fac. de Educación Física",
+    "Facultad de Turismo y Ambiente": "Fac. de Turismo y Ambiente",
+    "Instituto de Gestión e Innovación Tecnológica y Productiva": "Inst. Gestión e Innovación Tec.",
+    "Sede Regional Bell Ville - Mariano Moreno": "Bell Ville",
+    "Sede Regional Morteros - María Justa Moyano de Ezpeleta": "Morteros",
+    "Sede Regional Río Tercero": "Río Tercero",
+    "Sede Regional Laboulaye - Eduardo Lefebvre": "Laboulaye",
+    "Sede Regional Capilla del Monte - Dr. Bernardo Houssay": "Capilla del Monte",
+    "Sede Regional Deán Funes - Juan Bautista Alberdi": "Deán Funes",
+    "Sede Regional Villa Dolores - Luis Tessandori": "Villa Dolores",
+    "Sede Regional Villa Carlos Paz - Arturo Umberto Illia - ISAUI": "Villa Carlos Paz",
+    "Sede Regional Cruz del Eje - Arturo Capdevila": "Cruz del Eje",
+    "Sede Regional Mina Clavero - Dr. Carlos María Carena": "Mina Clavero",
+    "Sede Regional Las Varillas - Dalmacio Vélez Sarsfield": "Las Varillas",
+    "Sede Regional Marcos Juárez - Bernardo Houssay": "Marcos Juárez",
+    "Otro": "Otras dependencias"
+  },
+
+  "mapa": {
+    "_comentario": "El mapa no lleva rótulos de texto: el nombre y el total de cada sede se leen en el panel lateral 'Sedes regionales' y en la grilla de unidades académicas. Cada sede es un círculo ubicado en su localidad, con radio = min(30, 7 + 1,5·√n) y una marca por participante adentro. Si alguna vez se quieren volver a poner rótulos, el colocador que los ubicaba sin choques quedó en el historial de app.js."
+  },
+
+  "colores_unidad": {
+    "_comentario": "Código de color por unidad, tomado del informe institucional + el color propio del logo del IGTP. Las unidades que no están acá usan el amarillo UPC del tablero. Se aplica en la grilla 'Unidad académica o área de pertenencia': pinta la barra y deja una pestaña de color al costado.",
+    "Facultad de Arte y Diseño": "#D51317",
+    "Facultad de Educación y Salud": "#082E72",
+    "Facultad de Educación Física": "#008DC3",
+    "Facultad de Turismo y Ambiente": "#007854",
+    "Instituto de Gestión e Innovación Tecnológica y Productiva": "#93368A"
+  },
+
+  "grupos": [
+    {
+      "_comentario": "Contadores que suman varias unidades. 'Capital' agrupa las 4 facultades y el instituto IGTP.",
+      "nombre": "capital",
+      "etiqueta": "Capital",
+      "nota": "4 facultades + IGTP",
+      "unidades": [
+        "Facultad de Arte y Diseño",
+        "Facultad de Educación y Salud",
+        "Facultad de Educación Física",
+        "Facultad de Turismo y Ambiente",
+        "Instituto de Gestión e Innovación Tecnológica y Productiva"
+      ]
+    }
+  ],
+
+  "reglas_rol": [
+    ["autoridad", "Autoridad institucional"],
+    ["secretari", "Secretaria o Secretario"],
+    ["carrera", "Dirección o Coordinación de carrera"],
+    ["coordinaci", "Dirección o Coordinación de área"],
+    ["direcci", "Dirección o Coordinación de área"],
+    ["posgrado", "Estudiante de posgrado"],
+    ["pregrado", "Estudiante de pregrado y/o grado"],
+    ["estudiante", "Estudiante de pregrado y/o grado"],
+    ["no docente", "Personal no docente"],
+    ["graduad", "Graduado"],
+    ["docente", "Docente"]
+  ],
+
+  "mapeo_unidad": {
+    "rectorado": "Rectorado",
+    "jefatura": "Jefatura de Gabinete",
+    "academica y de posgrado": "Secretaría Académica y de Posgrado",
+    "académica y de posgrado": "Secretaría Académica y de Posgrado",
+    "extension": "Secretaría de Extensión",
+    "extensión": "Secretaría de Extensión",
+    "ciencia": "Secretaría de Ciencia, Arte y Tecnología",
+    "bienestar": "Secretaría de Bienestar Estudiantil y Graduados",
+    "legales": "Secretaría de Coordinación y Asuntos Legales",
+    "administracion": "Secretaría de Administración y Recursos Humanos",
+    "administración": "Secretaría de Administración y Recursos Humanos",
+    "arte y diseño": "Facultad de Arte y Diseño",
+    "educacion y salud": "Facultad de Educación y Salud",
+    "educación y salud": "Facultad de Educación y Salud",
+    "educacion fisica": "Facultad de Educación Física",
+    "educación física": "Facultad de Educación Física",
+    "turismo": "Facultad de Turismo y Ambiente",
+    "innovacion tecnologica": "Instituto de Gestión e Innovación Tecnológica y Productiva",
+    "innovación tecnológica": "Instituto de Gestión e Innovación Tecnológica y Productiva",
+    "bell ville": "Sede Regional Bell Ville - Mariano Moreno",
+    "morteros": "Sede Regional Morteros - María Justa Moyano de Ezpeleta",
+    "rio tercero": "Sede Regional Río Tercero",
+    "río tercero": "Sede Regional Río Tercero",
+    "laboulaye": "Sede Regional Laboulaye - Eduardo Lefebvre",
+    "capilla del monte": "Sede Regional Capilla del Monte - Dr. Bernardo Houssay",
+    "dean funes": "Sede Regional Deán Funes - Juan Bautista Alberdi",
+    "deán funes": "Sede Regional Deán Funes - Juan Bautista Alberdi",
+    "villa dolores": "Sede Regional Villa Dolores - Luis Tessandori",
+    "carlos paz": "Sede Regional Villa Carlos Paz - Arturo Umberto Illia - ISAUI",
+    "cruz del eje": "Sede Regional Cruz del Eje - Arturo Capdevila",
+    "mina clavero": "Sede Regional Mina Clavero - Dr. Carlos María Carena",
+    "las varillas": "Sede Regional Las Varillas - Dalmacio Vélez Sarsfield",
+    "marcos juarez": "Sede Regional Marcos Juárez - Bernardo Houssay",
+    "marcos juárez": "Sede Regional Marcos Juárez - Bernardo Houssay"
+  },
+
+  "demo": {
+    "activo": false,
+    "total": 260,
+    "ritmo_s": 4.0,
+    "semilla": 2026,
+    "peso_capital": 0.52
+  }
+}

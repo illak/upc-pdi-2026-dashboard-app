@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDI 2026 · Registro en vivo · UPC</title>
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<div id="escenario" class="escenario">
+  <div class="tablero">
+
+    <!-- ───────────────────────── CABECERA ───────────────────────── -->
+    <header class="cabecera">
+      <div class="marca">
+        <div class="logo">UPC</div>
+        <div class="marca-txt">
+          <b>Universidad Provincial</b>
+          <span>de Córdoba</span>
+        </div>
+      </div>
+
+      <div class="titulos">
+        <h1 id="titulo">Primera Jornada de Construcción Participativa del PDI</h1>
+        <p id="subtitulo">Registro de ingresos · en vivo</p>
+      </div>
+
+      <div class="contador">
+        <span class="contador-num" id="total">0</span>
+        <span class="contador-etq">ingresos<br>registrados</span>
+      </div>
+
+      <div class="vivo">
+        <span class="punto" id="punto"></span>
+        <div>
+          <b id="estado-txt">EN VIVO</b>
+          <time id="reloj">--:--:--</time>
+        </div>
+      </div>
+    </header>
+
+    <!-- ───────────────────────── CUERPO ───────────────────────── -->
+    <main class="cuerpo">
+
+      <section class="col-izq">
+        <article class="panel" id="panel-claustro">
+          <h2 class="panel-titulo">Claustro <em id="claustro-total">&nbsp;</em></h2>
+          <div class="panel-cuerpo cuerpo-torta">
+            <svg id="torta" viewBox="0 0 420 380" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-rol">
+          <h2 class="panel-titulo">Rol o función <em id="rol-total">&nbsp;</em></h2>
+          <div class="panel-cuerpo">
+            <div id="barras-rol" class="barras"></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="col-der">
+        <article class="panel panel-mapa">
+          <h2 class="panel-titulo">
+            Procedencia de los participantes
+            <em id="mapa-total">&nbsp;</em>
+          </h2>
+          <div class="panel-cuerpo sin-pad lienzo">
+            <div class="lienzo-lat">
+              <div class="tarjeta tarjeta-kpis">
+                <div class="mini">
+                  <span class="mini-num" id="kpi-sedes">0</span>
+                  <span class="mini-etq">sedes<br>con ingresos</span>
+                </div>
+                <div class="mini">
+                  <span class="mini-num" id="kpi-mapa">0</span>
+                  <span class="mini-etq">ubicados<br>en el mapa</span>
+                </div>
+                <div class="mini" id="mini-otro" hidden>
+                  <span class="mini-num" id="kpi-otro">0</span>
+                  <span class="mini-etq">otras<br>dependencias</span>
+                </div>
+                <div id="kpi-grupos"></div>
+              </div>
+
+              <div class="tarjeta tarjeta-sedes">
+                <h3>Sedes regionales <em id="sedes-total">&nbsp;</em></h3>
+                <div id="sedes" class="lista-sedes"></div>
+              </div>
+            </div>
+
+            <div class="lienzo-centro">
+              <svg id="mapa" viewBox="0 0 430 624" preserveAspectRatio="xMidYMid meet"></svg>
+              <div class="leyenda-mapa">
+                <span><i class="sim sim-sede"></i>Sede regional</span>
+                <span><i class="sim sim-capital"></i>Córdoba Capital</span>
+                <span><i class="sim sim-punto"></i>1 participante</span>
+              </div>
+            </div>
+
+            <div class="lienzo-der">
+              <div class="tarjeta tarjeta-ultimos">
+                <h3>Últimos ingresos</h3>
+                <ul id="ultimos"></ul>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel panel-unidades">
+          <h2 class="panel-titulo">Unidad académica o área de pertenencia <em id="unidades-total">&nbsp;</em></h2>
+          <div class="panel-cuerpo">
+            <div class="grilla-unidades" id="unidades"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- ───────────────────────── PIE ───────────────────────── -->
+    <footer class="pie">
+      <span id="pie-fuente">Fuente: formulario de registro · Primera Jornada de Construcción Participativa del PDI</span>
+      <span class="pie-medio" id="pie-actualizado">—</span>
+      <span id="pie-estado">Conectando…</span>
+    </footer>
+
+  </div>
+</div>
+<script src="datos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
